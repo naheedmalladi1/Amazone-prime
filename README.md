@@ -29,8 +29,8 @@ This project demonstrates deploying an Amazon Prime clone using a set of DevOps 
 ## Infrastructure Setup Using Terraform
 1. **Clone the Repository** (Open Command Prompt & run below):
    ```bash
-   git clone https://github.com/pandacloud1/DevopsProject2.git
-   cd DevopsProject2
+   git clone https://github.com/naheedmalladi1/Amazone-prime.git
+   cd Amazone-prime
    code .   # this command will open VS code in backend
    ```
 2. **Initialize and Apply Terraform**:
@@ -103,7 +103,7 @@ pipeline {
     stages {
         stage('1. Git Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/pandacloud1/DevopsProject2.git'
+                git branch: 'main', url: 'https://github.com/naheedmalladi1/Amazone-prime.git'
             }
         }
         
@@ -300,8 +300,8 @@ pipeline {
                 script {
                     // Step 1: Delete services and deployments
                     sh 'kubectl delete svc kubernetes || true'
-                    sh 'kubectl delete deploy pandacloud-app || true'
-                    sh 'kubectl delete svc pandacloud-app || true'
+                    sh 'kubectl delete deploy Amazon-app || true'
+                    sh 'kubectl delete svc Amazon-app || true'
 
                     // Step 2: Delete ArgoCD installation and namespace
                     sh 'kubectl delete -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml || true'
