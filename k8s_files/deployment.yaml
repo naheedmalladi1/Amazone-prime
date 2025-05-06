@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: Amazon-container
-        image: 905418078929.dkr.ecr.us-east-1.amazonaws.com/amazon-prime:latest
+        image: 135763922523.dkr.ecr.us-east-1.amazonaws.com/amazon-prime:latest:latest
         ports:
         - containerPort: 3000
 ...
