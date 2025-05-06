@@ -8,5 +8,6 @@ region_name   = "us-east-1"
 server_name   = "JENKINS-SERVER"
 
 # Note: 
+
 # a. First create a pem-key manually from the AWS console
 # b. Copy it in the same directory as your terraform code
