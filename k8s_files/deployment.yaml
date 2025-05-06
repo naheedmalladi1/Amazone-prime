@@ -1,0 +1,23 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: Amazon-app
+  labels:
+    app: Amazon-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: Amazon-app
+  template:
+    metadata:
+      labels:
+        app: Amazon-app
+    spec:
+      containers:
+      - name: Amazon-container
+        image: 905418078929.dkr.ecr.us-east-1.amazonaws.com/amazon-prime:latest
+        ports:
+        - containerPort: 3000
+...
