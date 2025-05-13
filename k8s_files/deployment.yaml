@@ -2,21 +2,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: Amazon-app
+  name: amazon-app
   labels:
-    app: Amazon-app
+    app: amazon-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: Amazon-app
+      app: amazon-app
   template:
     metadata:
       labels:
-        app: Amazon-app
+        app: amazon-app
     spec:
       containers:
-      - name: Amazon-container
+      - name: amazon-container
         image: 135763922523.dkr.ecr.us-east-1.amazonaws.com/amazon-prime:latest:latest
         ports:
         - containerPort: 3000
